@@ -21,10 +21,16 @@ environment:
   sdk: ">=2.7.0 <3.0.0"
 
 dependencies:
+  cupertino_icons: ^1.0.0
+  fl_chart: ^0.36.1
   flutter:
     sdk: flutter
-  cupertino_icons: ^1.0.0
+  flutter_bloc: ^7.0.1
   font_awesome_flutter: ^9.0.0
+  liquid_progress_indicator: ^0.4.0
+  multilevel_drawer: ^2.0.0
+  rxdart: ^0.27.1
+  spincircle_bottom_bar: ^1.0.0
 
 dev_dependencies:
   flutter_test:

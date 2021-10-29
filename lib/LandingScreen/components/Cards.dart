@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+// import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:api_example_app/constants.dart';
 import 'package:flutter/widgets.dart';
 
@@ -25,12 +25,10 @@ class CardsParent extends StatefulWidget {
 }
 
 class _CardsParentState extends State<CardsParent> {
-  get onTap => null;
-
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: onTap,
+      onTap: widget.onTap,
       child: Container(
         width: 140,
         height: 100,

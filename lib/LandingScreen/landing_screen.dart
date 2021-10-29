@@ -7,7 +7,8 @@ class LandingScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       drawer: SideDrawer(),
-      appBar: AppBar(title: Text('ngDAQ'), backgroundColor: kOrangeColor),
+      appBar:
+          AppBar(title: Text('SWALMS-TD4PAI'), backgroundColor: kOrangeColor),
       body: LandingScreenBody(),
     );
   }
@@ -22,7 +23,7 @@ class SideDrawer extends StatelessWidget {
           DrawerHeader(
             child: Center(
               child: Text(
-                'ngDAQ',
+                'SWALMS-TD4PAI',
                 textAlign: TextAlign.center,
                 style: TextStyle(color: Colors.white, fontSize: 25),
               ),

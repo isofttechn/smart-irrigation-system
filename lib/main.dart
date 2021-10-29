@@ -1,5 +1,6 @@
-import 'package:api_example_app/LandingScreen/landing_screen.dart';
 import 'package:flutter/material.dart';
+
+import 'LandingScreen/SideBar/sidebarLayout.dart';
 
 void main() {
   runApp(MyApp());
@@ -10,12 +11,11 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'ngDAQ',
+      title: 'SWALMS-TD4PAI',
       theme: ThemeData(
           visualDensity: VisualDensity.adaptivePlatformDensity,
           fontFamily: 'Poppins'),
-      home: LandingScreen(),
+      home: SideBarLayout(),
     );
   }
 }
-

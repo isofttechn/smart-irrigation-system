@@ -1,13 +1,23 @@
 import 'package:api_example_app/LandingScreen/components/Cards.dart';
 import 'package:api_example_app/LandingScreen/components/control_button.dart';
 import 'package:api_example_app/LandingScreen/components/default_button.dart';
+import 'package:api_example_app/SensorScreen/charts/GasChart.dart';
+import 'package:api_example_app/SensorScreen/charts/HumChart.dart';
+import 'package:api_example_app/SensorScreen/charts/MoisChart.dart';
+import 'package:api_example_app/SensorScreen/charts/NurChart.dart';
+import 'package:api_example_app/SensorScreen/charts/PhChart.dart';
+import 'package:api_example_app/SensorScreen/charts/TemChart.dart';
+import 'package:api_example_app/SensorScreen/charts/WaterChart.dart';
+import 'package:api_example_app/SensorScreen/charts/chartComponents/HumCard.dart';
+import 'package:api_example_app/SensorScreen/charts/chartComponents/WaterLevelCard.dart';
 import 'package:api_example_app/SensorScreen/components/sensor_screen.dart';
+import 'package:api_example_app/bloc.navigation_bloc/navigation_bloc.dart';
 import 'package:api_example_app/constants.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
-class LandingScreenBody extends StatefulWidget {
+class LandingScreenBody extends StatefulWidget with NavigationStates {
   @override
   _LandingScreenBodyState createState() => _LandingScreenBodyState();
 }
@@ -16,7 +26,8 @@ class _LandingScreenBodyState extends State<LandingScreenBody> {
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
-    return Padding(
+    return Container(
+      height: double.infinity,
       padding: EdgeInsets.symmetric(horizontal: size.width * 0.05),
       child: SingleChildScrollView(
         child: Column(
@@ -25,7 +36,7 @@ class _LandingScreenBodyState extends State<LandingScreenBody> {
             SizedBox(height: size.height * 0.1),
             Center(
               child: Text(
-                'ngDAQ',
+                'SWALMS-TD4PAI',
                 textAlign: TextAlign.center,
                 style: TextStyle(
                   fontWeight: FontWeight.bold,
@@ -37,7 +48,7 @@ class _LandingScreenBodyState extends State<LandingScreenBody> {
             SizedBox(height: size.height * 0.01),
             Center(
               child: Text(
-                'The ngDAQ is a Smart Agriculture solution based on IoT, seeking to increase farm productivity by automation and monitoring.',
+                'The SWALMS-TD4PAI is an IoT base Smart water level monitoring system',
                 textAlign: TextAlign.center,
                 style: TextStyle(color: kDarkGreyColor, fontSize: 12),
               ),
@@ -55,7 +66,7 @@ class _LandingScreenBodyState extends State<LandingScreenBody> {
                     Navigator.push(
                         context,
                         MaterialPageRoute(
-                            builder: (context) => new SensorScreen()));
+                            builder: (context) => new TemChart()));
                   },
                 ),
                 CardsParent(
@@ -63,44 +74,103 @@ class _LandingScreenBodyState extends State<LandingScreenBody> {
                   title: 'Hum ',
                   subtitle: '75%',
                   icon: FontAwesomeIcons.cloudShowersHeavy,
+                  onTap: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => new HumChart()));
+                  },
                 ),
               ],
             ),
+            // Row(
+            //   mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            //   children: [
+            //     CardsParent(
+            //       size: size,
+            //       icon: FontAwesomeIcons.hourglass,
+            //       onTap: () {
+            //         Navigator.push(
+            //             context,
+            //             MaterialPageRoute(
+            //                 builder: (context) => new MoisChart()));
+            //       },
+            //       title: 'Mos',
+            //       subtitle: '40',
+            //     ),
+            //     CardsParent(
+            //       size: size,
+            //       title: 'PH ',
+            //       subtitle: '14',
+            //       icon: FontAwesomeIcons.meteor,
+            //       onTap: () {
+            //         Navigator.push(context,
+            //             MaterialPageRoute(builder: (context) => new PhChart()));
+            //       },
+            //     ),
+            //   ],
+            // ),
+            // Row(
+            //   mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            //   children: [
+            //     CardsParent(
+            //       size: size,
+            //       icon: FontAwesomeIcons.leaf,
+            //       title: 'Nur',
+            //       subtitle: 'Good',
+            //       onTap: () {
+            //         Navigator.push(
+            //             context,
+            //             MaterialPageRoute(
+            //                 builder: (context) => new NurChart()));
+            //       },
+            //     ),
+            //     CardsParent(
+            //       size: size,
+            //       title: 'Gas ',
+            //       subtitle: 'Good',
+            //       icon: FontAwesomeIcons.flask,
+            //       onTap: () {
+            //         Navigator.push(
+            //             context,
+            //             MaterialPageRoute(
+            //                 builder: (context) => new GasChart()));
+            //       },
+            //     ),
+            //   ],
+            // ),
+
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 CardsParent(
                   size: size,
-                  icon: FontAwesomeIcons.hourglass,
-                  title: 'Mos',
-                  subtitle: '40',
+                  icon: FontAwesomeIcons.watchmanMonitoring,
+                  title: 'Wat',
+                  subtitle: 'Level',
+                  onTap: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => new WaterChart()));
+                  },
                 ),
                 CardsParent(
                   size: size,
-                  title: 'PH ',
-                  subtitle: '14',
-                  icon: FontAwesomeIcons.meteor,
+                  title: 'Hyd ',
+                  subtitle: 'Ponic',
+                  icon: FontAwesomeIcons.confluence,
+                  onTap: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => new GasChart()));
+                  },
                 ),
               ],
             ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                CardsParent(
-                  size: size,
-                  icon: FontAwesomeIcons.leaf,
-                  title: 'Nur',
-                  subtitle: 'Good',
-                ),
-                CardsParent(
-                  size: size,
-                  title: 'Gas ',
-                  subtitle: 'Good',
-                  icon: FontAwesomeIcons.flask,
-                ),
-              ],
-            ),
-            SizedBox(height: size.height * 0.05),
+
+            SizedBox(height: size.height * 0.2),
             // DefaultButton(
             //   size: size,
             //   title: "Next",
@@ -113,7 +183,6 @@ class _LandingScreenBodyState extends State<LandingScreenBody> {
             //     );
             //   },
             // ),
-            SizedBox(height: size.height * 0.05),
           ],
         ),
       ),
