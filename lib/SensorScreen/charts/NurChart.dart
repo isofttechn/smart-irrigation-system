@@ -3,7 +3,6 @@ import '../../bloc.navigation_bloc/navigation_bloc.dart';
 import 'package:flutter/material.dart';
 import 'package:api_example_app/constants.dart';
 
-
 import 'chartComponents/NurCard.dart';
 
 class NurChart extends StatefulWidget with NavigationStates {
@@ -14,7 +13,7 @@ class NurChart extends StatefulWidget with NavigationStates {
 class _NurChartState extends State<NurChart> {
   @override
   Widget build(BuildContext context) {
-    Size size = MediaQuery.of(context).size;
+    // Size size = MediaQuery.of(context).size;
     return Scaffold(
         appBar: AppBar(
           elevation: 0.0,

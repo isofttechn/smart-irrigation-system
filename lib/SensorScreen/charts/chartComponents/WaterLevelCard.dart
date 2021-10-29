@@ -4,7 +4,7 @@ import 'package:http/http.dart' as http;
 
 class WaterLevelCard extends StatefulWidget {
   const WaterLevelCard({
-    Key key,
+    Key? key,
     this.size,
     this.icon,
     this.title,
@@ -12,11 +12,11 @@ class WaterLevelCard extends StatefulWidget {
     this.subtitle,
   }) : super(key: key);
 
-  final Size size;
-  final IconData icon;
-  final String title;
-  final String subtitle;
-  final String richText;
+  final Size? size;
+  final IconData? icon;
+  final String? title;
+  final String? subtitle;
+  final String? richText;
 
   @override
   _WaterLevelCardState createState() => _WaterLevelCardState();

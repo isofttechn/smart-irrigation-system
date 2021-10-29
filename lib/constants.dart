@@ -1,4 +1,3 @@
-import 'dart:math';
 import 'dart:ui';
 
 const Color kBgColor = Color(0xFFecf5fb);

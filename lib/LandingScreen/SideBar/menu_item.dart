@@ -1,12 +1,16 @@
 import 'package:flutter/material.dart';
 
 class MenuItem extends StatelessWidget {
-  const MenuItem(
-      {Key key, this.icon, this.title, this.onTap, List<Object> children})
-      : super(key: key);
-  final IconData icon;
+  const MenuItem({
+    Key? key,
+    this.icon,
+    required this.title,
+    this.onTap,
+    List<Object>? children,
+  }) : super(key: key);
+  final IconData? icon;
   final String title;
-  final Function onTap;
+  final VoidCallback? onTap;
   @override
   Widget build(BuildContext context) {
     return GestureDetector(

@@ -10,7 +10,7 @@ class LineTitles {
         bottomTitles: SideTitles(
           showTitles: true,
           reservedSize: 22, //Bottom Space
-          getTextStyles: (value) => TextStyle(
+          getTextStyles: (_, value) => TextStyle(
             color: kBgColor,
             fontWeight: FontWeight.bold,
             fontSize: 13,
@@ -37,7 +37,7 @@ class LineTitles {
         //Left Side Title Objects
         leftTitles: SideTitles(
           showTitles: true,
-          getTextStyles: (value) => TextStyle(
+          getTextStyles: (_, value) => TextStyle(
             color: kBgColor,
             fontWeight: FontWeight.bold,
             fontSize: 13,

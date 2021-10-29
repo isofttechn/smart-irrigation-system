@@ -1,14 +1,14 @@
-import '../../LandingScreen/components/Cards.dart';
+import 'package:api_example_app/LandingScreen/components/Cards.dart';
+import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+
+import '/bloc.navigation_bloc/navigation_bloc.dart';
 import '../../SensorScreen/charts/GasChart.dart';
 import '../../SensorScreen/charts/HumChart.dart';
 import '../../SensorScreen/charts/MoisChart.dart';
 import '../../SensorScreen/charts/NurChart.dart';
 import '../../SensorScreen/charts/PhChart.dart';
 import '../../SensorScreen/charts/TemChart.dart';
-import '/bloc.navigation_bloc/navigation_bloc.dart';
-import 'package:flutter/material.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-
 import '../../constants.dart';
 
 class DeviceLanding extends StatefulWidget with NavigationStates {

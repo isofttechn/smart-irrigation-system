@@ -4,8 +4,8 @@ import 'package:api_example_app/LandingScreen/SideBar/menu_item.dart';
 import 'package:api_example_app/bloc.navigation_bloc/navigation_bloc.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:multilevel_drawer/multilevel_drawer.dart';
 import 'package:rxdart/rxdart.dart';
+
 // import 'package:rxdart/rxdart.dart';
 import '../../constants.dart';
 
@@ -18,10 +18,10 @@ class SideBar extends StatefulWidget {
 
 class _SideBarState extends State<SideBar>
     with SingleTickerProviderStateMixin<SideBar> {
-  AnimationController _animationController;
-  StreamController<bool> isSidebarOpenedStreamController;
-  Stream<bool> isSidebarOpenedStream;
-  StreamSink<bool> isSidebarOpenedSink;
+  late AnimationController _animationController;
+  late StreamController<bool> isSidebarOpenedStreamController;
+  Stream<bool>? isSidebarOpenedStream;
+  late StreamSink<bool> isSidebarOpenedSink;
 
   // final bool isSidebarOpened = true;
   final _animationDuration = const Duration(milliseconds: 500);
@@ -68,8 +68,8 @@ class _SideBarState extends State<SideBar>
           duration: _animationDuration,
           top: 0,
           bottom: 0,
-          left: isSideBarOpenedAsync.data ? 0 : -screenWidth,
-          right: isSideBarOpenedAsync.data ? 0 : screenWidth - 45,
+          left: isSideBarOpenedAsync.data! ? 0 : -screenWidth,
+          right: isSideBarOpenedAsync.data! ? 0 : screenWidth - 45,
           child: Row(
             children: <Widget>[
               Expanded(

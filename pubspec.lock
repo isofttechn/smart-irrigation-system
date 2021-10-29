@@ -35,7 +35,7 @@ packages:
       name: bloc
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "7.0.0"
+    version: "7.2.1"
   boolean_selector:
     dependency: transitive
     description:
@@ -113,6 +113,7 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "1.3.1"
+<<<<<<< Updated upstream
   checked_yaml:
     dependency: transitive
     description:
@@ -127,6 +128,8 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "0.3.5"
+=======
+>>>>>>> Stashed changes
   clock:
     dependency: transitive
     description:
@@ -168,6 +171,7 @@ packages:
       name: cupertino_icons
       url: "https://pub.dartlang.org"
     source: hosted
+<<<<<<< Updated upstream
     version: "1.0.0"
   dart_style:
     dependency: transitive
@@ -176,13 +180,16 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "2.2.0"
+=======
+    version: "1.0.3"
+>>>>>>> Stashed changes
   equatable:
     dependency: transitive
     description:
       name: equatable
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "2.0.2"
+    version: "2.0.3"
   fake_async:
     dependency: transitive
     description:
@@ -210,7 +217,7 @@ packages:
       name: fl_chart
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "0.36.1"
+    version: "0.40.2"
   flutter:
     dependency: "direct main"
     description: flutter
@@ -222,7 +229,7 @@ packages:
       name: flutter_bloc
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "7.0.1"
+    version: "7.3.1"
   flutter_test:
     dependency: "direct dev"
     description: flutter
@@ -234,6 +241,7 @@ packages:
       name: font_awesome_flutter
       url: "https://pub.dartlang.org"
     source: hosted
+<<<<<<< Updated upstream
     version: "9.0.0"
   freezed:
     dependency: "direct main"
@@ -270,12 +278,16 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "2.1.0"
+=======
+    version: "9.2.0"
+>>>>>>> Stashed changes
   http:
     dependency: "direct main"
     description:
       name: http
       url: "https://pub.dartlang.org"
     source: hosted
+<<<<<<< Updated upstream
     version: "0.13.3"
   http_multi_server:
     dependency: transitive
@@ -284,6 +296,9 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "3.0.1"
+=======
+    version: "0.13.4"
+>>>>>>> Stashed changes
   http_parser:
     dependency: transitive
     description:
@@ -340,6 +355,7 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "1.7.0"
+<<<<<<< Updated upstream
   mime:
     dependency: transitive
     description:
@@ -347,6 +363,8 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "1.0.1"
+=======
+>>>>>>> Stashed changes
   multilevel_drawer:
     dependency: "direct main"
     description:
@@ -375,6 +393,7 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "1.8.0"
+<<<<<<< Updated upstream
   pedantic:
     dependency: transitive
     description:
@@ -389,12 +408,15 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "1.5.0"
+=======
+>>>>>>> Stashed changes
   provider:
     dependency: transitive
     description:
       name: provider
       url: "https://pub.dartlang.org"
     source: hosted
+<<<<<<< Updated upstream
     version: "5.0.0"
   pub_semver:
     dependency: transitive
@@ -410,12 +432,16 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "1.1.0"
+=======
+    version: "6.0.1"
+>>>>>>> Stashed changes
   rxdart:
     dependency: "direct main"
     description:
       name: rxdart
       url: "https://pub.dartlang.org"
     source: hosted
+<<<<<<< Updated upstream
     version: "0.27.1"
   shelf:
     dependency: transitive
@@ -431,6 +457,9 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "1.0.1"
+=======
+    version: "0.27.2"
+>>>>>>> Stashed changes
   sky_engine:
     dependency: transitive
     description: flutter
@@ -456,7 +485,7 @@ packages:
       name: spincircle_bottom_bar
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "1.0.0"
+    version: "2.0.0"
   stack_trace:
     dependency: transitive
     description:
@@ -499,6 +528,7 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "0.4.2"
+<<<<<<< Updated upstream
   timing:
     dependency: transitive
     description:
@@ -506,6 +536,8 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "1.0.0"
+=======
+>>>>>>> Stashed changes
   typed_data:
     dependency: transitive
     description:

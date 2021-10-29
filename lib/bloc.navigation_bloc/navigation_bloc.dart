@@ -1,7 +1,7 @@
+import 'package:bloc/bloc.dart';
+
 import '/Pages/DeviceLocation/DeviceLocation.dart';
-
 import '/Pages/Devices/DeviceLanding.dart';
-
 import '../../LandingScreen/components/body.dart';
 import '../../SensorScreen/charts/GasChart.dart';
 import '../../SensorScreen/charts/HumChart.dart';
@@ -9,7 +9,6 @@ import '../../SensorScreen/charts/MoisChart.dart';
 import '../../SensorScreen/charts/NurChart.dart';
 import '../../SensorScreen/charts/PhChart.dart';
 import '../../SensorScreen/charts/TemChart.dart';
-import 'package:bloc/bloc.dart';
 
 enum NavigationEvents {
   // DashboardClickEvent,
@@ -61,6 +60,8 @@ class NavigationBloc extends Bloc<NavigationEvents, NavigationStates> {
       case NavigationEvents.DevicesLocationClickEvent:
         yield DevicesLocation();
         break;
+      default:
+        throw UnimplementedError();
     }
   }
 }
