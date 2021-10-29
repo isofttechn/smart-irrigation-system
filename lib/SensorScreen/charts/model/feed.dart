@@ -7,12 +7,17 @@ class Feed {
   Feed({
     required this.createdAt,
     required this.entryId,
-    required this.field4,
+    required this.percentage,
   });
 
-  String createdAt;
-  int entryId;
-  String field4;
+  @JsonKey(name: 'created_at')
+  String? createdAt;
+
+  @JsonKey(name: 'entry_id')
+  int? entryId;
+
+  @JsonKey(name: 'field1')
+  String? percentage;
 
   factory Feed.fromJson(Map<String, dynamic> json) => _$FeedFromJson(json);
 }

@@ -7,13 +7,13 @@ part of 'feed.dart';
 // **************************************************************************
 
 Feed _$FeedFromJson(Map<String, dynamic> json) => Feed(
-      createdAt: json['createdAt'] as String,
-      entryId: json['entryId'] as int,
-      field4: json['field4'] as String,
+      createdAt: json['created_at'] as String?,
+      entryId: json['entry_id'] as int?,
+      percentage: json['field1'] as String?,
     );
 
 Map<String, dynamic> _$FeedToJson(Feed instance) => <String, dynamic>{
-      'createdAt': instance.createdAt,
-      'entryId': instance.entryId,
-      'field4': instance.field4,
+      'created_at': instance.createdAt,
+      'entry_id': instance.entryId,
+      'field1': instance.percentage,
     };

@@ -29,18 +29,29 @@ class _WaterLevelCardState extends State<WaterLevelCard> {
   Widget build(BuildContext context) {
     return BlocBuilder<WaterLevelCubit, WaterLevelState>(
       builder: (context, state) {
+        if (state.waterLevelResponse == null) {
+          return const SizedBox.shrink();
+        }
         return Container(
           margin: const EdgeInsets.only(top: 15.0),
           // width: 500,
           height: 500,
           child: LiquidCircularProgressIndicator(
-            value: 0.5,
-            valueColor: AlwaysStoppedAnimation(Color(0xFFd4f1f9)),
+            value:
+                double.parse(state.waterLevelResponse!.feeds.last.percentage!) /
+                    100.0,
+            valueColor: AlwaysStoppedAnimation(
+                double.parse(state.waterLevelResponse!.feeds.last.percentage!) /
+                            100.0 <
+                        50.0
+                    ? Colors.red.withOpacity(0.7)
+                    : Color(0xFFd4f1f9)),
             backgroundColor: Colors.white,
             borderColor: Colors.black54,
             borderWidth: 0.0,
             direction: Axis.vertical,
-            center: Text("50%"),
+            center:
+                Text('${state.waterLevelResponse!.feeds.last.percentage!} %'),
           ),
         );
       },

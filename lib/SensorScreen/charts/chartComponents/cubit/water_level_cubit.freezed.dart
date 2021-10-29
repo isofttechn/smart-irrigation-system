@@ -17,8 +17,10 @@ final _privateConstructorUsedError = UnsupportedError(
 class _$WaterLevelStateTearOff {
   const _$WaterLevelStateTearOff();
 
-  _Initial initial() {
-    return const _Initial();
+  _WaterLevelSate call({WaterLevelResponse? waterLevelResponse}) {
+    return _WaterLevelSate(
+      waterLevelResponse: waterLevelResponse,
+    );
   }
 }
 
@@ -27,37 +29,11 @@ const $WaterLevelState = _$WaterLevelStateTearOff();
 
 /// @nodoc
 mixin _$WaterLevelState {
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function() initial,
-  }) =>
+  WaterLevelResponse? get waterLevelResponse =>
       throw _privateConstructorUsedError;
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? initial,
-  }) =>
-      throw _privateConstructorUsedError;
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? initial,
-    required TResult orElse(),
-  }) =>
-      throw _privateConstructorUsedError;
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(_Initial value) initial,
-  }) =>
-      throw _privateConstructorUsedError;
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(_Initial value)? initial,
-  }) =>
-      throw _privateConstructorUsedError;
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(_Initial value)? initial,
-    required TResult orElse(),
-  }) =>
+
+  @JsonKey(ignore: true)
+  $WaterLevelStateCopyWith<WaterLevelState> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -66,6 +42,7 @@ abstract class $WaterLevelStateCopyWith<$Res> {
   factory $WaterLevelStateCopyWith(
           WaterLevelState value, $Res Function(WaterLevelState) then) =
       _$WaterLevelStateCopyWithImpl<$Res>;
+  $Res call({WaterLevelResponse? waterLevelResponse});
 }
 
 /// @nodoc
@@ -76,100 +53,93 @@ class _$WaterLevelStateCopyWithImpl<$Res>
   final WaterLevelState _value;
   // ignore: unused_field
   final $Res Function(WaterLevelState) _then;
-}
-
-/// @nodoc
-abstract class _$InitialCopyWith<$Res> {
-  factory _$InitialCopyWith(_Initial value, $Res Function(_Initial) then) =
-      __$InitialCopyWithImpl<$Res>;
-}
-
-/// @nodoc
-class __$InitialCopyWithImpl<$Res> extends _$WaterLevelStateCopyWithImpl<$Res>
-    implements _$InitialCopyWith<$Res> {
-  __$InitialCopyWithImpl(_Initial _value, $Res Function(_Initial) _then)
-      : super(_value, (v) => _then(v as _Initial));
 
   @override
-  _Initial get _value => super._value as _Initial;
+  $Res call({
+    Object? waterLevelResponse = freezed,
+  }) {
+    return _then(_value.copyWith(
+      waterLevelResponse: waterLevelResponse == freezed
+          ? _value.waterLevelResponse
+          : waterLevelResponse // ignore: cast_nullable_to_non_nullable
+              as WaterLevelResponse?,
+    ));
+  }
+}
+
+/// @nodoc
+abstract class _$WaterLevelSateCopyWith<$Res>
+    implements $WaterLevelStateCopyWith<$Res> {
+  factory _$WaterLevelSateCopyWith(
+          _WaterLevelSate value, $Res Function(_WaterLevelSate) then) =
+      __$WaterLevelSateCopyWithImpl<$Res>;
+  @override
+  $Res call({WaterLevelResponse? waterLevelResponse});
+}
+
+/// @nodoc
+class __$WaterLevelSateCopyWithImpl<$Res>
+    extends _$WaterLevelStateCopyWithImpl<$Res>
+    implements _$WaterLevelSateCopyWith<$Res> {
+  __$WaterLevelSateCopyWithImpl(
+      _WaterLevelSate _value, $Res Function(_WaterLevelSate) _then)
+      : super(_value, (v) => _then(v as _WaterLevelSate));
+
+  @override
+  _WaterLevelSate get _value => super._value as _WaterLevelSate;
+
+  @override
+  $Res call({
+    Object? waterLevelResponse = freezed,
+  }) {
+    return _then(_WaterLevelSate(
+      waterLevelResponse: waterLevelResponse == freezed
+          ? _value.waterLevelResponse
+          : waterLevelResponse // ignore: cast_nullable_to_non_nullable
+              as WaterLevelResponse?,
+    ));
+  }
 }
 
 /// @nodoc
 
-class _$_Initial implements _Initial {
-  const _$_Initial();
+class _$_WaterLevelSate implements _WaterLevelSate {
+  const _$_WaterLevelSate({this.waterLevelResponse});
+
+  @override
+  final WaterLevelResponse? waterLevelResponse;
 
   @override
   String toString() {
-    return 'WaterLevelState.initial()';
+    return 'WaterLevelState(waterLevelResponse: $waterLevelResponse)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _Initial);
+        (other.runtimeType == runtimeType &&
+            other is _WaterLevelSate &&
+            (identical(other.waterLevelResponse, waterLevelResponse) ||
+                other.waterLevelResponse == waterLevelResponse));
   }
 
   @override
-  int get hashCode => runtimeType.hashCode;
+  int get hashCode => Object.hash(runtimeType, waterLevelResponse);
 
+  @JsonKey(ignore: true)
   @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function() initial,
-  }) {
-    return initial();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? initial,
-  }) {
-    return initial?.call();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? initial,
-    required TResult orElse(),
-  }) {
-    if (initial != null) {
-      return initial();
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(_Initial value) initial,
-  }) {
-    return initial(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(_Initial value)? initial,
-  }) {
-    return initial?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(_Initial value)? initial,
-    required TResult orElse(),
-  }) {
-    if (initial != null) {
-      return initial(this);
-    }
-    return orElse();
-  }
+  _$WaterLevelSateCopyWith<_WaterLevelSate> get copyWith =>
+      __$WaterLevelSateCopyWithImpl<_WaterLevelSate>(this, _$identity);
 }
 
-abstract class _Initial implements WaterLevelState {
-  const factory _Initial() = _$_Initial;
+abstract class _WaterLevelSate implements WaterLevelState {
+  const factory _WaterLevelSate({WaterLevelResponse? waterLevelResponse}) =
+      _$_WaterLevelSate;
+
+  @override
+  WaterLevelResponse? get waterLevelResponse;
+  @override
+  @JsonKey(ignore: true)
+  _$WaterLevelSateCopyWith<_WaterLevelSate> get copyWith =>
+      throw _privateConstructorUsedError;
 }

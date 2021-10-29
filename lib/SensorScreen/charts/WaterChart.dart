@@ -1,6 +1,7 @@
 import 'package:api_example_app/SensorScreen/charts/chartComponents/TemChartRectangular.dart';
 import 'package:api_example_app/SensorScreen/charts/chartComponents/WaterLevelCard.dart';
 import 'package:api_example_app/SensorScreen/charts/chartComponents/cubit/water_level_cubit.dart';
+import 'package:api_example_app/SensorScreen/charts/chartComponents/service/water_level_service.dart';
 import 'package:api_example_app/constants.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -42,7 +43,9 @@ class _WaterChartState extends State<WaterChart> {
           children: [
             TemChartRectangular(),
             BlocProvider(
-              create: (context) => WaterLevelCubit(),
+              create: (context) => WaterLevelCubit(
+                waterLevelService: WaterLevelService(),
+              )..fetchWaterLevel(),
               child: WaterLevelCard(),
             ),
             SizedBox(height: size.height * 0.2),
