@@ -1,16 +1,11 @@
 import 'package:api_example_app/LandingScreen/components/Cards.dart';
-import 'package:api_example_app/LandingScreen/components/control_button.dart';
-import 'package:api_example_app/LandingScreen/components/default_button.dart';
+
 import 'package:api_example_app/SensorScreen/charts/GasChart.dart';
 import 'package:api_example_app/SensorScreen/charts/HumChart.dart';
-import 'package:api_example_app/SensorScreen/charts/MoisChart.dart';
-import 'package:api_example_app/SensorScreen/charts/NurChart.dart';
-import 'package:api_example_app/SensorScreen/charts/PhChart.dart';
+
 import 'package:api_example_app/SensorScreen/charts/TemChart.dart';
 import 'package:api_example_app/SensorScreen/charts/WaterChart.dart';
-import 'package:api_example_app/SensorScreen/charts/chartComponents/HumCard.dart';
-import 'package:api_example_app/SensorScreen/charts/chartComponents/WaterLevelCard.dart';
-import 'package:api_example_app/SensorScreen/components/sensor_screen.dart';
+
 import 'package:api_example_app/bloc.navigation_bloc/navigation_bloc.dart';
 import 'package:api_example_app/constants.dart';
 import 'package:flutter/cupertino.dart';

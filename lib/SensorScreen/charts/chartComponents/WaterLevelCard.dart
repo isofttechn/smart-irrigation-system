@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:liquid_progress_indicator/liquid_progress_indicator.dart';
+import 'package:http/http.dart' as http;
 
 class WaterLevelCard extends StatefulWidget {
   const WaterLevelCard({
@@ -39,4 +40,12 @@ class _WaterLevelCardState extends State<WaterLevelCard> {
       ),
     );
   }
+}
+
+Future<String> fetchUsers() async {
+  var url =
+      Uri.parse('https://api.thingspeak.com/channels/1226265/field/1.json');
+  http.Response response = await http.get(url);
+  print(response.body);
+  return response.body.toString();
 }

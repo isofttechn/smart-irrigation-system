@@ -27,6 +27,7 @@ dependencies:
     sdk: flutter
   flutter_bloc: ^7.0.1
   font_awesome_flutter: ^9.0.0
+  http: ^0.13.3
   liquid_progress_indicator: ^0.4.0
   multilevel_drawer: ^2.0.0
   rxdart: ^0.27.1
