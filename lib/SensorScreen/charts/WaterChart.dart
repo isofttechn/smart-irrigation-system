@@ -1,8 +1,9 @@
 import 'package:api_example_app/SensorScreen/charts/chartComponents/TemChartRectangular.dart';
 import 'package:api_example_app/SensorScreen/charts/chartComponents/WaterLevelCard.dart';
-import '../../bloc.navigation_bloc/navigation_bloc.dart';
-import 'package:flutter/material.dart';
 import 'package:api_example_app/constants.dart';
+import 'package:flutter/material.dart';
+
+import '../../bloc.navigation_bloc/navigation_bloc.dart';
 
 class WaterChart extends StatefulWidget with NavigationStates {
   @override
