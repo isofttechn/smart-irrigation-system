@@ -7,8 +7,7 @@ class BottomBar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    body:
-    SpinCircleBottomBarHolder(
+    return SpinCircleBottomBarHolder(
       bottomNavigationBar: SCBottomBarDetails(items: <SCBottomBarItem>[
         SCBottomBarItem(
           icon: Icons.dashboard,

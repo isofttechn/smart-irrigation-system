@@ -1,13 +1,9 @@
-import '/SensorScreen/charts/chartComponents/TemCard.dart';
+import 'package:api_example_app/constants.dart';
+import 'package:flutter/material.dart';
+
 import '/SensorScreen/charts/chartComponents/TemChartRectangular.dart';
 import '../../bloc.navigation_bloc/navigation_bloc.dart';
-import 'package:flutter/material.dart';
-import 'package:api_example_app/constants.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import '/LandingScreen/components/Cards.dart';
-
 import 'chartComponents/GasCard.dart';
-import 'chartComponents/NurCard.dart';
 
 class GasChart extends StatefulWidget with NavigationStates {
   @override
@@ -17,7 +13,7 @@ class GasChart extends StatefulWidget with NavigationStates {
 class _GasChartState extends State<GasChart> {
   @override
   Widget build(BuildContext context) {
-    Size size = MediaQuery.of(context).size;
+    // Size size = MediaQuery.of(context).size;
     return Scaffold(
         appBar: AppBar(
           elevation: 0.0,

@@ -3,7 +3,7 @@ import 'package:api_example_app/constants.dart';
 
 class NurCard extends StatelessWidget {
   const NurCard({
-    Key key,
+    Key? key,
     this.size,
     this.icon,
     this.title,
@@ -11,11 +11,11 @@ class NurCard extends StatelessWidget {
     this.subtitle,
   }) : super(key: key);
 
-  final Size size;
-  final IconData icon;
-  final String title;
-  final String subtitle;
-  final String richText;
+  final Size? size;
+  final IconData? icon;
+  final String? title;
+  final String? subtitle;
+  final String? richText;
 
   @override
   Widget build(BuildContext context) {

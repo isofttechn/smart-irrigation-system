@@ -6,19 +6,19 @@ import 'package:flutter/widgets.dart';
 
 class CardsParent extends StatefulWidget {
   const CardsParent({
-    Key key,
-    @required this.size,
+    Key? key,
+    this.size,
     this.icon,
-    this.title,
-    this.subtitle,
-    this.onTap,
+    required this.title,
+    required this.subtitle,
+    required this.onTap,
   }) : super(key: key);
 
-  final Size size;
-  final IconData icon;
+  final Size? size;
+  final IconData? icon;
   final String title;
   final String subtitle;
-  final Function onTap;
+  final VoidCallback onTap;
 
   @override
   _CardsParentState createState() => _CardsParentState();
