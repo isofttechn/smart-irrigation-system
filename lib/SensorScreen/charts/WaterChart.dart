@@ -45,7 +45,9 @@ class _WaterChartState extends State<WaterChart> {
             BlocProvider(
               create: (context) => WaterLevelCubit(
                 waterLevelService: WaterLevelService(),
-              )..fetchWaterLevel(),
+              )
+                ..fetchWaterLevel()
+                ..startTimer(),
               child: WaterLevelCard(),
             ),
             SizedBox(height: size.height * 0.2),

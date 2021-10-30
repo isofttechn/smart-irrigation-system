@@ -17,9 +17,11 @@ final _privateConstructorUsedError = UnsupportedError(
 class _$WaterLevelStateTearOff {
   const _$WaterLevelStateTearOff();
 
-  _WaterLevelSate call({WaterLevelResponse? waterLevelResponse}) {
+  _WaterLevelSate call(
+      {WaterLevelResponse? waterLevelResponse, required DateTime lastApiCall}) {
     return _WaterLevelSate(
       waterLevelResponse: waterLevelResponse,
+      lastApiCall: lastApiCall,
     );
   }
 }
@@ -31,6 +33,7 @@ const $WaterLevelState = _$WaterLevelStateTearOff();
 mixin _$WaterLevelState {
   WaterLevelResponse? get waterLevelResponse =>
       throw _privateConstructorUsedError;
+  DateTime get lastApiCall => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
   $WaterLevelStateCopyWith<WaterLevelState> get copyWith =>
@@ -42,7 +45,7 @@ abstract class $WaterLevelStateCopyWith<$Res> {
   factory $WaterLevelStateCopyWith(
           WaterLevelState value, $Res Function(WaterLevelState) then) =
       _$WaterLevelStateCopyWithImpl<$Res>;
-  $Res call({WaterLevelResponse? waterLevelResponse});
+  $Res call({WaterLevelResponse? waterLevelResponse, DateTime lastApiCall});
 }
 
 /// @nodoc
@@ -57,12 +60,17 @@ class _$WaterLevelStateCopyWithImpl<$Res>
   @override
   $Res call({
     Object? waterLevelResponse = freezed,
+    Object? lastApiCall = freezed,
   }) {
     return _then(_value.copyWith(
       waterLevelResponse: waterLevelResponse == freezed
           ? _value.waterLevelResponse
           : waterLevelResponse // ignore: cast_nullable_to_non_nullable
               as WaterLevelResponse?,
+      lastApiCall: lastApiCall == freezed
+          ? _value.lastApiCall
+          : lastApiCall // ignore: cast_nullable_to_non_nullable
+              as DateTime,
     ));
   }
 }
@@ -74,7 +82,7 @@ abstract class _$WaterLevelSateCopyWith<$Res>
           _WaterLevelSate value, $Res Function(_WaterLevelSate) then) =
       __$WaterLevelSateCopyWithImpl<$Res>;
   @override
-  $Res call({WaterLevelResponse? waterLevelResponse});
+  $Res call({WaterLevelResponse? waterLevelResponse, DateTime lastApiCall});
 }
 
 /// @nodoc
@@ -91,12 +99,17 @@ class __$WaterLevelSateCopyWithImpl<$Res>
   @override
   $Res call({
     Object? waterLevelResponse = freezed,
+    Object? lastApiCall = freezed,
   }) {
     return _then(_WaterLevelSate(
       waterLevelResponse: waterLevelResponse == freezed
           ? _value.waterLevelResponse
           : waterLevelResponse // ignore: cast_nullable_to_non_nullable
               as WaterLevelResponse?,
+      lastApiCall: lastApiCall == freezed
+          ? _value.lastApiCall
+          : lastApiCall // ignore: cast_nullable_to_non_nullable
+              as DateTime,
     ));
   }
 }
@@ -104,14 +117,16 @@ class __$WaterLevelSateCopyWithImpl<$Res>
 /// @nodoc
 
 class _$_WaterLevelSate implements _WaterLevelSate {
-  const _$_WaterLevelSate({this.waterLevelResponse});
+  const _$_WaterLevelSate({this.waterLevelResponse, required this.lastApiCall});
 
   @override
   final WaterLevelResponse? waterLevelResponse;
+  @override
+  final DateTime lastApiCall;
 
   @override
   String toString() {
-    return 'WaterLevelState(waterLevelResponse: $waterLevelResponse)';
+    return 'WaterLevelState(waterLevelResponse: $waterLevelResponse, lastApiCall: $lastApiCall)';
   }
 
   @override
@@ -120,11 +135,13 @@ class _$_WaterLevelSate implements _WaterLevelSate {
         (other.runtimeType == runtimeType &&
             other is _WaterLevelSate &&
             (identical(other.waterLevelResponse, waterLevelResponse) ||
-                other.waterLevelResponse == waterLevelResponse));
+                other.waterLevelResponse == waterLevelResponse) &&
+            (identical(other.lastApiCall, lastApiCall) ||
+                other.lastApiCall == lastApiCall));
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, waterLevelResponse);
+  int get hashCode => Object.hash(runtimeType, waterLevelResponse, lastApiCall);
 
   @JsonKey(ignore: true)
   @override
@@ -133,11 +150,14 @@ class _$_WaterLevelSate implements _WaterLevelSate {
 }
 
 abstract class _WaterLevelSate implements WaterLevelState {
-  const factory _WaterLevelSate({WaterLevelResponse? waterLevelResponse}) =
-      _$_WaterLevelSate;
+  const factory _WaterLevelSate(
+      {WaterLevelResponse? waterLevelResponse,
+      required DateTime lastApiCall}) = _$_WaterLevelSate;
 
   @override
   WaterLevelResponse? get waterLevelResponse;
+  @override
+  DateTime get lastApiCall;
   @override
   @JsonKey(ignore: true)
   _$WaterLevelSateCopyWith<_WaterLevelSate> get copyWith =>

@@ -30,7 +30,9 @@ class _WaterLevelCardState extends State<WaterLevelCard> {
     return BlocBuilder<WaterLevelCubit, WaterLevelState>(
       builder: (context, state) {
         if (state.waterLevelResponse == null) {
-          return const SizedBox.shrink();
+          return const Center(
+            child: CircularProgressIndicator(),
+          );
         }
         return Container(
           margin: const EdgeInsets.only(top: 15.0),
@@ -38,20 +40,28 @@ class _WaterLevelCardState extends State<WaterLevelCard> {
           height: 500,
           child: LiquidCircularProgressIndicator(
             value:
-                double.parse(state.waterLevelResponse!.feeds.last.percentage!) /
+                double.parse(state.waterLevelResponse!.feeds.last.percentage) /
                     100.0,
             valueColor: AlwaysStoppedAnimation(
-                double.parse(state.waterLevelResponse!.feeds.last.percentage!) /
-                            100.0 <
-                        50.0
-                    ? Colors.red.withOpacity(0.7)
-                    : Color(0xFFd4f1f9)),
+              double.parse(state.waterLevelResponse!.feeds.last.percentage) <
+                      50.0
+                  ? Colors.red.withOpacity(0.7)
+                  : Color(0xFFd4f1f9),
+            ),
             backgroundColor: Colors.white,
             borderColor: Colors.black54,
             borderWidth: 0.0,
             direction: Axis.vertical,
-            center:
-                Text('${state.waterLevelResponse!.feeds.last.percentage!} %'),
+            center: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Text(
+                    '${double.parse(state.waterLevelResponse!.feeds.last.percentage).toStringAsFixed(2)} %'),
+                Text(
+                    'last Update: ${state.waterLevelResponse!.feeds.last.createdAt}'),
+                Text('last api Call: ${state.lastApiCall} '),
+              ],
+            ),
           ),
         );
       },

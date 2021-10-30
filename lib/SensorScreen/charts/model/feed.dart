@@ -11,13 +11,13 @@ class Feed {
   });
 
   @JsonKey(name: 'created_at')
-  String? createdAt;
+  String createdAt;
 
   @JsonKey(name: 'entry_id')
-  int? entryId;
+  int entryId;
 
-  @JsonKey(name: 'field1')
-  String? percentage;
+  @JsonKey(name: 'field4')
+  String percentage;
 
   factory Feed.fromJson(Map<String, dynamic> json) => _$FeedFromJson(json);
 }
