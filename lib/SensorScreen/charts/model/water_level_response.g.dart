@@ -12,8 +12,3 @@ WaterLevelResponse _$WaterLevelResponseFromJson(Map<String, dynamic> json) =>
           .map((e) => Feed.fromJson(e as Map<String, dynamic>))
           .toList(),
     );
-
-Map<String, dynamic> _$WaterLevelResponseToJson(WaterLevelResponse instance) =>
-    <String, dynamic>{
-      'feeds': instance.feeds,
-    };

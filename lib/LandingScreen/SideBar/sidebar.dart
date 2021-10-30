@@ -119,8 +119,8 @@ class _SideBarState extends State<SideBar>
                           title: 'Dashboard',
                           onTap: () {
                             onIconPressed();
-                            BlocProvider.of<NavigationBloc>(context).add(
-                                NavigationEvents.LandingScreenBodyClickEvent);
+                            BlocProvider.of<NavigationBloc>(context)
+                                .add(LandingScreenBodyClickEvent());
                           },
                         ),
                         Padding(
@@ -150,7 +150,7 @@ class _SideBarState extends State<SideBar>
                                 onTap: () {
                                   onIconPressed();
                                   BlocProvider.of<NavigationBloc>(context)
-                                      .add(NavigationEvents.HumChartClickEvent);
+                                      .add(HumChartClickEvent());
                                 },
                               ),
                               MenuItem(
@@ -159,7 +159,7 @@ class _SideBarState extends State<SideBar>
                                 onTap: () {
                                   onIconPressed();
                                   BlocProvider.of<NavigationBloc>(context)
-                                      .add(NavigationEvents.TemChartClickEvent);
+                                      .add(TemChartClickEvent());
                                 },
                               ),
                               MenuItem(
@@ -168,7 +168,7 @@ class _SideBarState extends State<SideBar>
                                 onTap: () {
                                   onIconPressed();
                                   BlocProvider.of<NavigationBloc>(context)
-                                      .add(NavigationEvents.GasChartClickEvent);
+                                      .add(GasChartClickEvent());
                                 },
                               ),
                               MenuItem(
@@ -176,8 +176,8 @@ class _SideBarState extends State<SideBar>
                                 title: 'Moisture Data',
                                 onTap: () {
                                   onIconPressed();
-                                  BlocProvider.of<NavigationBloc>(context).add(
-                                      NavigationEvents.MoisChartClickEvent);
+                                  BlocProvider.of<NavigationBloc>(context)
+                                      .add(MoisChartClickEvent());
                                 },
                               ),
                               MenuItem(
@@ -186,7 +186,7 @@ class _SideBarState extends State<SideBar>
                                 onTap: () {
                                   onIconPressed();
                                   BlocProvider.of<NavigationBloc>(context)
-                                      .add(NavigationEvents.NurChartClickEvent);
+                                      .add(NurChartClickEvent());
                                 },
                               ),
                               MenuItem(
@@ -195,7 +195,7 @@ class _SideBarState extends State<SideBar>
                                 onTap: () {
                                   onIconPressed();
                                   BlocProvider.of<NavigationBloc>(context)
-                                      .add(NavigationEvents.PhChartClickEvent);
+                                      .add(PhChartClickEvent());
                                 },
                               ),
                             ],
@@ -207,7 +207,7 @@ class _SideBarState extends State<SideBar>
                           onTap: () {
                             onIconPressed();
                             BlocProvider.of<NavigationBloc>(context)
-                                .add(NavigationEvents.DevicesClickEvent);
+                                .add(DevicesClickEvent());
                           },
                         ),
                         MenuItem(
@@ -215,8 +215,8 @@ class _SideBarState extends State<SideBar>
                           title: 'Device Location',
                           onTap: () {
                             onIconPressed();
-                            BlocProvider.of<NavigationBloc>(context).add(
-                                NavigationEvents.DevicesLocationClickEvent);
+                            BlocProvider.of<NavigationBloc>(context)
+                                .add(DevicesLocationClickEvent());
                           },
                         ),
                         MenuItem(
@@ -225,7 +225,7 @@ class _SideBarState extends State<SideBar>
                           onTap: () {
                             onIconPressed();
                             BlocProvider.of<NavigationBloc>(context)
-                                .add(NavigationEvents.AccountClickEvent);
+                                .add(AccountClickEvent());
                           },
                         ),
                         MenuItem(
@@ -234,7 +234,7 @@ class _SideBarState extends State<SideBar>
                           onTap: () {
                             onIconPressed();
                             BlocProvider.of<NavigationBloc>(context)
-                                .add(NavigationEvents.DevicesClickEvent);
+                                .add(DevicesClickEvent());
                           },
                         ),
                         Divider(

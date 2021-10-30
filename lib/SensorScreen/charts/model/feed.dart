@@ -2,7 +2,7 @@ import 'package:freezed_annotation/freezed_annotation.dart';
 
 part 'feed.g.dart';
 
-@JsonSerializable()
+@JsonSerializable(createToJson: false)
 class Feed {
   Feed({
     required this.createdAt,

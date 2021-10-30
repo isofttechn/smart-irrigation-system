@@ -2,7 +2,6 @@ import 'package:api_example_app/SensorScreen/charts/chartComponents/cubit/water_
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:liquid_progress_indicator/liquid_progress_indicator.dart';
-import 'package:http/http.dart' as http;
 
 class WaterLevelCard extends StatefulWidget {
   const WaterLevelCard({

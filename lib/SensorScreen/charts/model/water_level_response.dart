@@ -3,7 +3,7 @@ import 'package:freezed_annotation/freezed_annotation.dart';
 
 part 'water_level_response.g.dart';
 
-@JsonSerializable()
+@JsonSerializable(createToJson: false)
 class WaterLevelResponse {
   WaterLevelResponse({
     required this.feeds,
