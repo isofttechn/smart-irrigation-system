@@ -5,15 +5,15 @@ import 'package:flutter/material.dart';
 
 class DefaultButton extends StatelessWidget {
   const DefaultButton({
-    Key key,
+    Key? key,
     this.size,
     this.title,
     this.press,
   }) : super(key: key);
 
-  final Size size;
-  final String title;
-  final GestureTapCallback press;
+  final Size? size;
+  final String? title;
+  final GestureTapCallback? press;
 
   @override
   Widget build(BuildContext context) {
@@ -27,7 +27,7 @@ class DefaultButton extends StatelessWidget {
         );
       },
       child: Container(
-        height: size.height * 0.07,
+        height: size!.height * 0.07,
         width: double.infinity,
         decoration: BoxDecoration(
           color: kOrangeColor,

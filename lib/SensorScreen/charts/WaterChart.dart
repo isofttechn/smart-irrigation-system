@@ -1,8 +1,12 @@
 import 'package:api_example_app/SensorScreen/charts/chartComponents/TemChartRectangular.dart';
 import 'package:api_example_app/SensorScreen/charts/chartComponents/WaterLevelCard.dart';
-import '../../bloc.navigation_bloc/navigation_bloc.dart';
-import 'package:flutter/material.dart';
+import 'package:api_example_app/SensorScreen/charts/chartComponents/cubit/water_level_cubit.dart';
+import 'package:api_example_app/SensorScreen/charts/chartComponents/service/water_level_service.dart';
 import 'package:api_example_app/constants.dart';
+import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+
+import '../../bloc.navigation_bloc/navigation_bloc.dart';
 
 class WaterChart extends StatefulWidget with NavigationStates {
   @override
@@ -38,7 +42,14 @@ class _WaterChartState extends State<WaterChart> {
         child: ListView(
           children: [
             TemChartRectangular(),
-            WaterLevelCard(),
+            BlocProvider(
+              create: (context) => WaterLevelCubit(
+                waterLevelService: WaterLevelService(),
+              )
+                ..fetchWaterLevel()
+                ..startTimer(),
+              child: WaterLevelCard(),
+            ),
             SizedBox(height: size.height * 0.2),
           ],
         ),

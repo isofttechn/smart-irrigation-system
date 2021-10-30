@@ -9,8 +9,8 @@ class StatusButton extends StatefulWidget {
 class _StatusButtonState extends State<StatusButton>
     with SingleTickerProviderStateMixin {
   bool isChecked = false;
-  Animation<Alignment> _animation;
-  AnimationController _animationController;
+  late Animation<Alignment> _animation;
+  late AnimationController _animationController;
 
   @override
   void initState() {

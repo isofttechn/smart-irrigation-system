@@ -3,15 +3,15 @@ import 'package:flutter/material.dart';
 
 class ControlButton extends StatefulWidget {
   const ControlButton({
-    Key key,
-    @required this.size,
+    Key? key,
+    required this.size,
     this.icon,
     this.title,
   }) : super(key: key);
 
   final Size size;
-  final IconData icon;
-  final String title;
+  final IconData? icon;
+  final String? title;
 
   @override
   _ControlButtonState createState() => _ControlButtonState();
@@ -53,7 +53,7 @@ class _ControlButtonState extends State<ControlButton> {
         ),
         SizedBox(height: widget.size.height * 0.005),
         Text(
-          widget.title,
+          widget.title!,
           textAlign: TextAlign.center,
           style: TextStyle(
             color: kDarkGreyColor,

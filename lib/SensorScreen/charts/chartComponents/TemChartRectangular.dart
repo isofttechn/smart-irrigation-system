@@ -4,7 +4,7 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class TemChartRectangular extends StatelessWidget {
   const TemChartRectangular({
-    Key key,
+    Key? key,
     this.size,
     this.icon,
     this.title,
@@ -12,11 +12,11 @@ class TemChartRectangular extends StatelessWidget {
     this.subtitle,
   }) : super(key: key);
 
-  final Size size;
-  final IconData icon;
-  final String title;
-  final String subtitle;
-  final String richText;
+  final Size? size;
+  final IconData? icon;
+  final String? title;
+  final String? subtitle;
+  final String? richText;
 
   @override
   Widget build(BuildContext context) {

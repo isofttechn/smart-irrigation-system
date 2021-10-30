@@ -1,13 +1,11 @@
 import 'package:api_example_app/SensorScreen/charts/widgets/line_chart_widget.dart';
-import 'package:flutter/material.dart';
 import 'package:api_example_app/constants.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:api_example_app/LandingScreen/components/Cards.dart';
+import 'package:flutter/material.dart';
 
 class TemCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    Size size = MediaQuery.of(context).size;
+    // Size size = MediaQuery.of(context).size;
     return Container(
       margin: const EdgeInsets.only(top: 15.0),
       width: 500,
