@@ -505,14 +505,14 @@ packages:
       name: syncfusion_flutter_core
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "18.4.49"
+    version: "19.3.47"
   syncfusion_flutter_gauges:
     dependency: "direct main"
     description:
       name: syncfusion_flutter_gauges
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "18.4.49"
+    version: "19.3.47"
   term_glyph:
     dependency: transitive
     description:

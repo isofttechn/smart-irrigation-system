@@ -33,7 +33,7 @@ class TemGauge extends StatelessWidget {
                   ], annotations: <GaugeAnnotation>[
                     GaugeAnnotation(
                         widget: Container(
-                            child: Text('90.0',
+                            child: Text('90.0°C',
                                 style: TextStyle(
                                     fontSize: 25,
                                     fontWeight: FontWeight.bold))),
