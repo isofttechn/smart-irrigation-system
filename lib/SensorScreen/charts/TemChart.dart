@@ -1,5 +1,6 @@
 import 'package:api_example_app/SensorScreen/charts/chartComponents/TemCard.dart';
 import 'package:api_example_app/SensorScreen/charts/chartComponents/TemChartRectangular.dart';
+import 'package:api_example_app/SensorScreen/charts/chartComponents/TemGauge.dart';
 import 'package:api_example_app/constants.dart';
 import 'package:flutter/material.dart';
 
@@ -39,6 +40,7 @@ class _TemChartState extends State<TemChart> {
         child: ListView(
           children: [
             TemChartRectangular(),
+            TemGauge(),
             TemCard(),
             SizedBox(height: size.height * 0.2),
           ],
