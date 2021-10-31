@@ -29,11 +29,11 @@ class TemGauge extends StatelessWidget {
                     GaugeRange(
                         startValue: 100, endValue: 150, color: Colors.red)
                   ], pointers: <GaugePointer>[
-                    NeedlePointer(value: 90)
+                    NeedlePointer(value: 40)
                   ], annotations: <GaugeAnnotation>[
                     GaugeAnnotation(
                         widget: Container(
-                            child: Text('90.0°C',
+                            child: Text('40.0°C',
                                 style: TextStyle(
                                     fontSize: 25,
                                     fontWeight: FontWeight.bold))),
