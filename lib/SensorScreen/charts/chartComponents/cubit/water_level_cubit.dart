@@ -1,6 +1,7 @@
 import 'dart:async';
 
 import 'package:api_example_app/SensorScreen/charts/chartComponents/service/water_level_service.dart';
+import 'package:api_example_app/SensorScreen/charts/model/feed.dart';
 import 'package:api_example_app/SensorScreen/charts/model/water_level_response.dart';
 import 'package:bloc/bloc.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
@@ -13,6 +14,7 @@ class WaterLevelCubit extends Cubit<WaterLevelState> {
       : super(
           WaterLevelState(
             lastApiCall: DateTime.now(),
+            isLoaded: false,
           ),
         );
 
@@ -25,11 +27,23 @@ class WaterLevelCubit extends Cubit<WaterLevelState> {
   void fetchWaterLevel() async {
     final response = await waterLevelService.fetchWaterLevel();
 
+    if (state.selectedFeed == null) {
+      updateTank(response.feeds.last);
+    }
+
     emit(
       state.copyWith(
         waterLevelResponse: response,
         lastApiCall: DateTime.now(),
       ),
     );
+
+    if (!state.isLoaded) {
+      emit(state.copyWith(isLoaded: true));
+    }
+  }
+
+  void updateTank(Feed feed) {
+    emit(state.copyWith(selectedFeed: feed));
   }
 }
